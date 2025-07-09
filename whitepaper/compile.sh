@@ -1,0 +1,14 @@
+rm wp.aux
+rm wp.out
+rm wp.log
+rm wp.bbl
+rm wp.blg
+pdflatex wp
+bibtex wp
+pdflatex wp
+pdflatex wp
+rm wp.aux
+rm wp.out
+rm wp.log
+rm wp.bbl
+rm wp.blg
