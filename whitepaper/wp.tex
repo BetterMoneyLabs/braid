@@ -44,23 +44,11 @@
 
 \newcommand{\bc}{Braid}
 
-\newcommand{\ma}{\mathcal{A}}
-\newcommand{\mb}{\mathcal{B}}
-\newcommand{\he}{\hat{e}}
-\newcommand{\sr}{\stackrel}
-\newcommand{\ra}{\rightarrow}
-\newcommand{\la}{\leftarrow}
-\newcommand{\state}{state}
-
 \newcommand{\ignore}[1]{} 
-\newcommand{\full}[1]{}
-\newcommand{\notfull}[1]{#1}
-\newcommand{\rand}{\stackrel{R}{\leftarrow}}
-\newcommand{\mypar}[1]{\smallskip\noindent\textbf{#1.}}
 
 \begin{document}
 
-\title{Braid - Bitcoin and Ergo Double Merge-Mined Sidechain with focus on Stablecoins, RWAs, Bitcoin DeFi}
+\title{\bc{} - Bitcoin and Ergo Double Merge-Mined Sidechain with focus on Stablecoins, RWAs, Bitcoin DeFi}
 
 \author{kushti \\ \href{mailto:kushti@protonmail.ch}{kushti@protonmail.ch}}
 
@@ -79,6 +67,23 @@ blockchain-based assets for the needs of the real world:
 
 * there is big trend around stablecoins. Many private enterprises, following Tether's success, and nation states starting to issue own stablecoins, there are many efforts on making stablecoin payments seamless, reduce fees to almost zero. There are even buzzy at the moment 
 announcements of stablecoin oriented blockchains, such as Plasma. 
+
+We propose \bc{}, a blockchain which is oriented towards 
+
+We propose to build Braid, a double merged-mined sidechain of both Bitcoin and Ergo, using Sigma, Ergo's contractual layer, along with modifications perfectly suitable for stablecoins and other real world assets. This would allow to have:
+
+\begin{itemize}
+  \item Proof-of-Work security from the biggest world's computing network (Bitcoin mining)
+  \item Fees payable in any asset (you can even send gold-pegged tokens and pay in USD token, if there is option to swap USD for native token)
+  \item Ready-made liqudity solutions since day one (!), such as bridges with Bitcoin, Ethereum, Binance Smartchain, Cardano
+  \item Two-way trustless pegging with Ergo blockchain since day one
+  \item Trustless (BitVM based, later BIP300/301 based maybe) bridge with Bitcoin
+  \item Ready-made applications, such as AMM DEXes, orderbook DEXes, decentralized auctions, bonds, lending pools etc
+  \item Regulatory sandboxing and compliance granularity, for example, to isolate jurisdiction-specific stablecoins, or shape real world assets usage with tailored compliance
+  \item Compliance granularity may be combined with privacy
+  \item Innovative algorithmic stablecoin designs, and insurance contracts, where algorithmic assets can insure non-delivery risks for tokenized real-world assets
+  \item High performance: PoW secured blocks every few seconds
+\end{itemize}
 
 
 
