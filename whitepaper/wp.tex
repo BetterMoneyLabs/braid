@@ -128,6 +128,29 @@ We have team of people participated in creation of such blockchains and blockcha
 \label{sec-techdetails}
 
 
+\subsection{Global Transfer Policies}
+
+In Braid, we want to augment Ergo contractual capabilities with Global Transfer Policies, set of contracts and limitation for a box, which may be propagated via transactions.
+
+A Global Transfer Policy is set in a box, which needs to have a special NFT for identification. A policy box has locking script, like every box, which is allowing to change policies as well as locking script itself. A policy box should also have following registers:
+
+\begin{itemize} 
+ \item R4 - spending policy - any computation (getting the same context avaiable to a locking script, aside of mining pubkey and votes). Should return true or false. If true, the box may be spent, otherwise, not. 
+ \item R5 - propagation policy - also computation - returns number of inputs which should have the same policy
+\end{itemize}
+
+Then we add another special register in Braid, and this register may contain multiple NFT ids. Boxes with such NFTs must be provided as read-only inputs of a transaction. An input can be spent if for all of its policies spending and propagation sub-policies satisfied.
+
+
+
+Global Transfer Policies may have multiple use cases:
+
+\begin{itemize}
+\item a stablecoin issuer may use them to have black list or even white list. White list can be anonymized, by having stealth address like hiding in the white list
+\item there could be very flexible policies  
+\item they can be used to build different forms of Islamic Finance systems etc
+\end{itemize}
+
 
 
 
