@@ -68,9 +68,13 @@ blockchain-based assets for the needs of the real world:
 * there is big trend around stablecoins. Many private enterprises, following Tether's success, and nation states starting to issue own stablecoins, there are many efforts on making stablecoin payments seamless, reduce fees to almost zero. There are even buzzy at the moment 
 announcements of stablecoin oriented blockchains, such as Plasma. 
 
-We propose \bc{}, a blockchain which is oriented towards 
+While real-world adoption via different developments following the trends is highly positive, and moving forward a financial revolution we dreamed of, the state of developments is [...]
 
-We propose to build Braid, a double merged-mined sidechain of both Bitcoin and Ergo, using Sigma, Ergo's contractual layer, along with modifications perfectly suitable for stablecoins and other real world assets. This would allow to have:
+
+To tackle with the issues stated, we propose \bc{}, a blockchain which is oriented towards [...] 
+
+
+\bc{} is a double merged-mined sidechain of both Bitcoin and Ergo, using Sigma, Ergo's contractual layer, along with modifications perfectly suitable for stablecoins and other real world assets. This would allow to have:
 
 \begin{itemize}
   \item Proof-of-Work security from the biggest world's computing network (Bitcoin mining)
@@ -78,6 +82,7 @@ We propose to build Braid, a double merged-mined sidechain of both Bitcoin and E
   \item Ready-made liqudity solutions since day one (!), such as bridges with Bitcoin, Ethereum, Binance Smartchain, Cardano
   \item Two-way trustless pegging with Ergo blockchain since day one
   \item Trustless (BitVM based, later BIP300/301 based maybe) bridge with Bitcoin
+  \item RGB-like programmability on top of Bitcoin blockchain metadata
   \item Ready-made applications, such as AMM DEXes, orderbook DEXes, decentralized auctions, bonds, lending pools etc
   \item Regulatory sandboxing and compliance granularity, for example, to isolate jurisdiction-specific stablecoins, or shape real world assets usage with tailored compliance
   \item Compliance granularity may be combined with privacy
@@ -91,6 +96,18 @@ We propose to build Braid, a double merged-mined sidechain of both Bitcoin and E
 \label{sec-design}
 
 
+
+
+\section{Competition}
+\label{sec-competition}
+
+
+There are some attempts to build stablecoin and RWA focused blockchains, such as Tron and Plasma. However, usually they are just EVM chains with some features, like gasless transfers, implemented. Also, there are some attempts to build 
+
+Here we propose a comprehensive set of solutions to Bitcoin DeFi, stablecoins, RWAs,
+compliance granularity, precisely defined monetary circuits and so on.  
+
+\bc{} is offering multi-layered set of solution for both Bitcoin DeFi and stablecoins and RWA. 
 
 
 \section{Technical Details}
