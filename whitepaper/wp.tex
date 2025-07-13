@@ -127,8 +127,27 @@ We have team of people participated in creation of such blockchains and blockcha
 \section{Technical Details}
 \label{sec-techdetails}
 
+\subsection{Consensus Layer}
 
-\subsection{Global Transfer Policies}
+We have two kinds of blocks, Bitcoin-merged and Ergo-merged.
+
+For Bitcoin-merged, header contains Bitcoin header plus digest of AVL+ tree committing to the FULL Bitcoin UTXO set (including OP\_RETURN UTXOS) (at what time?), and reference to last seen Ergo-merged block. Difficulty for Bitcoin header is set to normal Bitcoin block difficulty, so only Bitcoin full block accounted for in Braid (not a mining share with lower difficulty like in). Proof of inclusion of Braid data into Bitcoin block is submitted by Bitcoin miner along with the header to Braid network.
+
+For Ergo-merged, header contains Ergo header, reference to last-seen Bitcoin-merged block. Difficulty for Ergo header is set to input-block difficulty, so every input-block is accounted for in Braid. 
+
+
+\subsection{Transactional Layer}
+
+Bitcoin Script was initial experiment in programmable money, which, unfortunately, got stuck too early. Ethereum started from disagreement
+within Bitcoin community but followed completely different paradigm of "smart" contracts, which is not quite feasible for building monetary circuits. Ergo launch in 2019 marked revival and start of new epoch in programmable power, with the same UTXO approach as in Bitcoin, but much more powerful programmability, and support for some cryptographic protocols as applications (see "ErgoScript, a Cryptocurrency Scripting Language Supporting Noninteractive Zero-Knowledge Proofs" whitepepaer).
+
+In short, contractually-wise, Ergo is about:
+
+* UTXO model. A transaction has potentially many inputs and outputs. We unify those entities in Ergo, so say that a transaction is creating some boxes and eliminates some boxes. A current state of the network then is a set of active boxes then. 
+* Registers: each box is made of registers (and registers only), where a register contains a typed value. There are registers with predefined values, such as locking script, monetary value, natively supported tokens, reference to transaction where the box was created. In addition to four predefined registers, there could be up to six registers with arbitrary values.
+
+
+\subsubsection{Global Transfer Policies}
 
 In Braid, we want to augment Ergo contractual capabilities with Global Transfer Policies, set of contracts and limitation for a box, which may be propagated via transactions.
 
@@ -150,6 +169,12 @@ Global Transfer Policies may have multiple use cases:
 \item there could be very flexible policies  
 \item they can be used to build different forms of Islamic Finance systems etc
 \end{itemize}
+
+\subsubsection{RGB++}
+
+\subsubsection{Ergo Applications}
+
+\knote{put a list}
 
 
 
