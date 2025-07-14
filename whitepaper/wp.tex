@@ -71,10 +71,7 @@ announcements of stablecoin oriented blockchains, such as Plasma.
 While real-world adoption via different developments following the trends is highly positive, and moving forward a financial revolution we dreamed of, the state of developments is [...]
 
 
-To tackle with the issues stated, we propose \bc{}, a blockchain which is oriented towards [...] 
-
-
-\bc{} is a double merged-mined sidechain of both Bitcoin and Ergo, using Sigma, Ergo's contractual layer, along with modifications perfectly suitable for stablecoins and other real world assets. This would allow to have:
+To tackle with the issues stated, we propose \bc{}, a blockchain which is oriented towards needs of stablecoins and real-world assets  issuers and users, while also allows for using Bitcoin for collateral in decentralized finance, and having Proof-of-Work security for every block. \bc{} is a double merged-mined sidechain of both Bitcoin and Ergo, using Sigma, Ergo's contractual layer, along with modifications perfectly suitable for stablecoins and other real world assets. This would allow to have:
 
 \begin{itemize}
   \item Proof-of-Work security from the biggest world's computing network (Bitcoin mining)
@@ -172,16 +169,11 @@ Global Transfer Policies may have multiple use cases:
 
 \subsubsection{RGB++}
 
+As commitment for Bitcoin UTXO set is available in applications, we can make contracts prescribed by commitments on the Bitcoin blockchain  written into OP\_RETURN attachments. This is similar to RGB and RGB++ protocols. Here we have minimal trust assumptions for such protocols.
+
 \subsubsection{Ergo Applications}
 
-\knote{put a list}
-
-
-
-
-\section{Implementation}
-\label{sec-apps}
-
+With possibility to trustlessly bring Bitcoin to \bc{} and back, all the application from Ergo blockchains can be freely deployed on \bc{}~(as they are open-sourced and under permissive license mostly).
 
 
 \newpage
