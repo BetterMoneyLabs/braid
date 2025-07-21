@@ -101,8 +101,14 @@ Here we are going to provide high-level overview of \bc{} design. Technical deta
 \subsection{Consensus}
 
 The main motivation for consensus is to have quick blocks, have most secure, simple, efficient consensus, so Proof-of-Work. Following ideas from such designs as Prism, TailStorm, Leios and sub-blocks in Ergo, we have ordering and input blocks here. Ordering blocks are committed on the Bitcoin blockchain using merge-mined sidechain standards~\cite{bitcoinmm}.
+Input blocks are committed on Ergo blockhain's input-blocks, to have blocks every few seconds. An ordering blocks is just witnessing a best input-blocks chain seen by
+its miner. Ordering block is also committing to UTXO set and interlinks vector~\cite{kiayias2020non}, and, as ordering blocks are committed on the Bitcoin blockchain, that
+allows for Bitcoin light clients to work with cryptographically secure commitments to Bitcoin UTXO set and headers-chain.
 
 \subsection{Programmable Money}
+
+
+
 \subsection{Global Transfer Policies}
 
 
