@@ -111,12 +111,15 @@ allows for Bitcoin light clients to work with cryptographically secure commitmen
 
 \subsection{Global Transfer Policies}
 
-Global transfer policies (GTPs) is efficient mechanism allowing to define a mechanism for controlling transfers for a token, such as:
+Global transfer policies (GTPs) is efficient mechanism allowing for precise control over transfers for a token, such as:
 \begin{itemize}
+  \item rules can be applied to any token transfer. Possible use cases include black and white lists, for both addresses
+  and (or) applications, mandatory payments on certain actions, and so on.
+  \item policies can be propagated, so it is possible to demand other tokens interacting with tokens protected with a GTP to
+  apply GPT after interaction as well. Similarly, for some parties or applications a GPT could be cleared.
   \item rules for updating GTPs are set separately in a transparent and manageable way. For example, GTPs can be updated
   by a single party, several parties via a threshold signature, via decentralized autonomous organization (DAO) voting,
   on schedule, and so on. Update rules can be updateable as well.
-  \item
 \end{itemize}
 
 \section{Competition}
