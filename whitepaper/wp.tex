@@ -91,19 +91,19 @@ In short, \bc{} is a solarpunk made to extreme: you can define precise usage rul
 
 For such setting, minimal trust assumptions are needed. That is why we have chosen double merged mined Bitcoin and Ergo sidechain, which is allowing to have Proof-of-Work security for every block, along with fast blocks. 
 
-The rest of the whitepaper is organized as follows. In Section~\ref{sec-design} we provide high-level overview of \bc{} design.
+The rest of the whitepaper is organized as follows. In Section~\ref{sec-design} we provide high-level overview of \bc{} design. Section~\ref{sec-competition} is
+ comparing \bc{} with other known players in the same field. In Section~\ref{sec-team} we present a team which is working on \bc{}. In Section~\ref{sec-tokenomics}
+we provide planned tokenomics. Section~\ref{sec-techdetails} provides some technical details for \bc{} design outlined in Section~\ref{sec-design}.
 
 \section{Design}
 \label{sec-design}
 
-Here we are going to provide high-level overview of \bc{} design. Technical details can be found in Section~\ref{sec-techdetails}. Section~\ref{sec-competition}
-provides \bc{} with other known players in the same field. In Section~\ref{sec-team} we present a team which is working on \bc{}. In Section~\ref{sec-tokenomics}
-we provide planned tokenomics. Section~\ref{sec-techdetails} provides some technical details for \bc{} design outlined in Section~\ref{sec-design}.
+Here we are going to provide high-level overview of \bc{} design. Technical details can be found in Section~\ref{sec-techdetails}.
 
 
 \subsection{Consensus}
 
-The main motivation for consensus is to have quick blocks, have most secure, simple, efficient consensus, so Proof-of-Work. Following ideas from such designs as Prism, TailStorm, Leios and sub-blocks in Ergo, we have ordering and input blocks here. Ordering blocks are committed on the Bitcoin blockchain using merge-mined sidechain standards~\cite{bitcoinmm}.
+The main motivation for \bc{} consensus is to have quick blocks along with most secure, simple, efficient consensus, so Proof-of-Work. Following ideas from such designs as Prism, TailStorm, Leios and sub-blocks in Ergo, we have ordering and input blocks here. Ordering blocks are committed on the Bitcoin blockchain using merge-mined sidechain standards~\cite{bitcoinmm}.
 Input blocks are committed on Ergo blockhain's input-blocks, to have blocks every few seconds. An ordering blocks is just witnessing a best input-blocks chain seen by
 its miner. Ordering block is also committing to UTXO set and interlinks vector~\cite{kiayias2020non}, and, as ordering blocks are committed on the Bitcoin blockchain, that
 allows for Bitcoin light clients to work with cryptographically secure commitments to Bitcoin UTXO set and headers-chain.
