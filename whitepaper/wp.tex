@@ -74,11 +74,11 @@ blockchain-based assets for the needs of the real world:
 While real-world adoption via different developments following the stated trends is highly positive, and it is still moving, slowly but surely, the world towards a financial revolution we dreamed of, the state of developments still can be significantly improved by providing better basis for trust-minimized  Bitcoin DeFi as well as programmable money toolset for stablecoin and real-world assets issuers and users. For that, we propose \bc{}, a blockchain which is oriented towards needs of stablecoins and real-world assets  issuers and users, while also allows for using Bitcoin for collateral in decentralized finance with minimal trust assumptions, and having Proof-of-Work security for every block. \bc{} is a double merged-mined sidechain of both Bitcoin and Ergo, using Sigma, Ergo's contractual layer, along with modifications perfectly suitable for stablecoins and other real world assets. This would allow to have:
 
 \begin{itemize}
-  \item proof-of-Work security from the biggest world's computing network (Bitcoin mining)
-  \item fees payable in any asset (you can even send gold-pegged tokens and pay in USD token, if there is option to swap USD for native token)
+  \item proof-of-work security from the biggest world's computing network (Bitcoin mining)
+  \item fees payable in any asset (you can even send gold-pegged tokens and pay in USD token, if there is option to swap USD for native token available)
   \item ready-made liqudity solutions since day one (!), such as bridges with Bitcoin, Ethereum, Binance Smartchain, Cardano
   \item two-way trustless pegging with Ergo blockchain since day one
-  \item trustless (BitVM based, later BIP300/301 based maybe) bridge with Bitcoin
+  \item trustless (BitVM2 based, later BIP300/301 based maybe) bridge with Bitcoin
   \item RGB-like programmability on top of Bitcoin blockchain metadata
   \item ready-made applications, such as AMM DEXes, orderbook DEXes, decentralized auctions, bonds, lending pools etc
   \item regulatory sandboxing and compliance granularity, for example, to isolate jurisdiction-specific stablecoins, or shape real world assets usage with tailored compliance
@@ -91,11 +91,14 @@ In short, \bc{} is a solarpunk made to extreme: you can define precise usage rul
 
 For such setting, minimal trust assumptions are needed. That is why we have chosen double merged mined Bitcoin and Ergo sidechain, which is allowing to have Proof-of-Work security for every block, along with fast blocks. 
 
+The rest of the whitepaper is organized as follows. In Section~\ref{sec-design} we provide high-level overview of \bc{} design.
 
 \section{Design}
 \label{sec-design}
 
-Here we are going to provide high-level overview of \bc{} design. Technical details can be found in Section~\ref{sec-techdetails}. 
+Here we are going to provide high-level overview of \bc{} design. Technical details can be found in Section~\ref{sec-techdetails}. Section~\ref{sec-competition}
+provides \bc{} with other known players in the same field. In Section~\ref{sec-team} we present a team which is working on \bc{}. In Section~\ref{sec-tokenomics}
+we provide planned tokenomics. Section~\ref{sec-techdetails} provides some technical details for \bc{} design outlined in Section~\ref{sec-design}.
 
 
 \subsection{Consensus}
