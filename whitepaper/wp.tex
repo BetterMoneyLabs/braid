@@ -107,7 +107,20 @@ allows for Bitcoin light clients to work with cryptographically secure commitmen
 
 \subsection{Programmable Money}
 
+\bc{} is following Ergo approach towards programmable money:
+\begin{itemize}
+  \item UTXO model, simple, parallelization friendly, and powerful transactional model coming from Bitcoin
+  \item extended context to make blockchain truly programmable. For \bc{} it means making both Bitcoin and Ergo
+  blockchains accessible to contracts
+  \item everything-is-a-contract approach, with no need for account abstractions
+  \item natural support for intents (every contract is an intent by default)
+  \item efficient on-chain representation
+  \item support for real privacy-preserving ring and threshold signatures, as well as some more cryptographic
+  applications via Sigma protocols
+\end{itemize}
 
+However, we would like to experiment with some new features as well in \bc{}, such as Global Transfer Policies,
+described below.
 
 \subsection{Global Transfer Policies}
 
