@@ -1,0 +1,2 @@
+Bitcoin Merged Mining Framework
+===============================

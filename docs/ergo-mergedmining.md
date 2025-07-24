@@ -1,0 +1,2 @@
+Ergo Merged Mining Framework
+===============================
