@@ -151,8 +151,23 @@ We have team of people participated in creation of such blockchains and blockcha
 \section{Tokenomics and Liquidity}
 \label{sec-tokenomics}
 
-\knote{to be decided later}
+There are few desiderata points for Braid tokenomics. First of all, we want to reward Bitcoin and Ergo miners for securing the network. Second, as liquidity rails will appear since day one, we need for some unlocked liquidity since day one as well.
 
+\begin{itemize}
+  \item Merged Mining Rewards: 44
+  \item Ecosystem Treasury: 10
+  \item Public Sale: 14
+  \item Team \& Advisors: 14
+  \item VC/Strategic: 14
+  \item Liquidity Mining: 4
+\end{itemize}
+
+Tokens will be locked using emission contracts:
+\begin{itemize}
+  \item mining rewards will be released block-by-block, unlike Bitcoin, rewards will be unlocked by a contract, not client code. The emission will last for 24 years. BRAID will have demurrage, with miners charging storage rent every 4 years. Demurrage fees will go into another emission contract, rewarding after initial emission period.
+  \item some tokens will be put in liquidity mining rewards for liquidity pools created in the genesis block.
+  \item treasury / VC / team tokens will be put into emission contracts and released block by block as well
+\end{itemize}
 
 
 \section{Technical Details}
