@@ -129,12 +129,36 @@ Global transfer policies (GTPs) is efficient mechanism allowing for precise cont
   on schedule, and so on. Update rules can be updateable as well.
 \end{itemize}
 
-\subsection{Dark Circuits}
+\subsection{Dark Circuits and Dark Tokens}
 
+Among with demand for tailored compliance with precisely defined rules, there is also demand for privacy. It is often
+desirable to combine transparent and dark (private) circuits also. \bc{} would allow that by:
+
+\begin{itemize}
+  \item dark tokens - tokens with hidden via homomorphic commitments amounts, spending would require to provide
+        Bulletproofs++ proofs for validity of newly created outputs. This is done in Monero.
+  \item A global transfer policy may require to use stealth addresses for receivers, as well as other means of privacy
+        (input decoys etc).
+\end{itemize}
+
+So there is possibility to use stealth addresses, or hidden amounts, or both. A token may have requirement to be in a
+transparent circuit until reaching a gateway after which it can be transferred to more private one, or be swapped to
+a dark token, and so on.
+
+\subsection{Collateralized Algorithmic Stablecoins}
+
+Ergo already has variety of proven with time algorithmic crypto-backed stablecoins, such as SigmaUSD (Djed protocol),
+GluonGold (Gluon protocol), DexyGold (Dexy protocol). They can be reused on \bc{}, along with other financial primitives
+ useful for stablecoin and RWA issuers, such as ChainCash~\cite{chaincash}, elastic peer-to-peer stablecoin created collectively via
+trust and blockchain assets, or a scheme to insure physical asset delivery using algorithmic crypto-backed counterpart~\cite{insurance}.
 
 \subsection{New Horizons for Stablecoin and RWA Issuers}
 
-
+With all the tooling mentioned above, \bc{}, with no doubt, is two steps ahead in regards with serving needs of stablecoin
+ and RWAs issuers, in regulatory and other enviroments of any complexity.
+For example, a stablecoin token maybe issued in one regulatory zone, such as United States, circulate there according to the rules
+of the US zone, then sent to a gateway allowing to transfer it to MiCA zone (EU) and circulate there according to global transfer policy of the zone,
+ and so one.
 
 \section{Competition}
 \label{sec-competition}
