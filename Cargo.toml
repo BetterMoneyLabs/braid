@@ -4,3 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+ergo_client = { git = "https://github.com/SethDusek/ergo_client.git" }
+ergo-lib = { version = "0.28.0", features = [
+    "compiler",
+] }
