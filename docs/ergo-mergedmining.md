@@ -19,6 +19,8 @@ Every sidechain should have one byte id, from 0 to 254 (255 is left for possible
 Then key to write is (0x04, sidechain_id) (two bytes).
 The value is hash of sidechain data.
 
+There is Merkle tree support in Sigma-Rust and `extension_proof_for` function to check proof.
+
 
 Interaction With the Ergo Blockchain
 ------------------------------------
@@ -27,4 +29,8 @@ Interaction With the Ergo Blockchain
 Implementation Plan
 -------------------
 
-* Implement Merkle tree in Rust (following reference client implementation in Scala)
+* Implement functions to work with input blocks in Ergo Client ( github.com/SethDusek/ergo_client ), also, 
+a function to get extension section corresponding to an input block (implement  corresponding API method 
+in reference client as well)
+* implement tracking loop to get recent state committed on the chain (with signalling on rollback etc)
+* 
