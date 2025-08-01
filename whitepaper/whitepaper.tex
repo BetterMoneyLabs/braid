@@ -242,8 +242,17 @@ A Global Transfer Policy is set in a box, which needs to have a special NFT for 
  \item R5 - propagation policy - also computation - returns indices of outputs which should have the same policy
 \end{itemize}
 
-Then we add another special register in Braid, and this register may contain multiple NFT ids. Boxes with such NFTs must be provided as read-only inputs of a transaction. An input can be spent if for all of its policies spending and propagation sub-policies satisfied.
+Then there are two ways to add GTPs to Ergo-like blockchains, one would require a hard-fork or a new chain, and another can be implemented in Ergo even:
 
+\begin{itemize}
+  \item We add another special register in Braid, and this register may contain multiple NFT ids. Boxes with such NFTs must be
+provided as read-only inputs of a transaction. An input can be spent if for all of its policies spending and propagation sub-policies satisfied.
+  \item We designate special context input extension variable id, for example, \#120, and a box which is a subject to GTP must have script of
+  the following form `blake2b256()getVar[Coll[Byte]](120)) == XXX \&\& other\_conditions`, where XXX is hash of GTPs which should be provided in context extension, concatenated NFT ids. Older, non-GTP
+  supporting clients will just check equality, newer clients will check that boxes with such NFT ids provided as read-only inputs, and check spending and propagations
+  policies written there. For outputs which are subject to GTPs propagation must, again, have script corresponding to the
+  the `blake2b256()getVar[Coll[Byte]](120)) == XXX \&\& other\_conditions` form.
+\end{itemize}
 
 
 Global Transfer Policies may have multiple use cases:
