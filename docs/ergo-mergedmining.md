@@ -38,6 +38,12 @@ Interaction With the Ergo Blockchain
 ------------------------------------
 
 
+Extending Validation Context With Sidechain Data
+------------------------------------------------
+
+
+
+
 Implementation Plan
 -------------------
 
@@ -45,4 +51,4 @@ Implementation Plan
 a function to get extension section corresponding to an input block (implement  corresponding API method 
 in reference client as well)
 * implement tracking loop to get recent state committed on the chain (with signalling on rollback etc)
-* 
+* implement sidechain data posting loop
